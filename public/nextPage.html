@@ -1,0 +1,20 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1>We did it !</h1>
+        <div id='name'></div>
+        <div id='surename'></div>
+    </body>
+    <script>
+        const url_string = window.location.href;
+        const url = new URL(url_string);
+        let nameVar = url.searchParams.get('fname');
+        let surenameVar = url.searchParams.get('lname');
+        let nameComponent = document.getElementById('name');
+        let surenameComponent = document.getElementById('surename');
+        nameComponent.innerText = nameVar;
+        surenameComponent.innerText = surenameVar;
+    </script>
+</html>
